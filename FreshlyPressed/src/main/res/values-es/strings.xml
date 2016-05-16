@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unavailable_image">Imagen no disponible</string>
+    <string name="featured_image_description">Imagen del post</string>
+    <string name="unavailable_post_list">No hay datos disponibles</string>
+    <string name="post_list_error">Error de red, reintentar nuevamente</string>
+</resources>

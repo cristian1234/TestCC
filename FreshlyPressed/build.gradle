@@ -1,0 +1,44 @@
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:support-v4:23.3.0'
+}
+
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+
+        minSdkVersion 15
+        targetSdkVersion 23
+
+        applicationId "com.test.cc"
+        versionName "1.0.0"
+        versionCode 1
+
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'firma'
+            keyPassword 'palabraclave'
+            storeFile file('../keystore.jks')
+            storePassword 'palabraclave'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFile 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
